@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+  --text-15: 15px;
+  --text-13: 13px;
+
+  --color-primaryBlue: #2563eb;
+  --color-secondBlue: #0260ffe5;
+  --color-dark-gray: #637083;
+  --color-gradient: #e6ffff;
+
+  --color-border: #6b728033;
+  --color-borderLight: #e1e1e1;
+
+  --radius-5: 5px;
+
+  --color-fontGray: #545454;
+  --color-fontBlack: #0e0e0e;
+
+  --color-mediumGray: #404040;
+  --color-ligthGray: #888888;
+}

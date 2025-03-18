@@ -4,7 +4,7 @@ import NavBar from "./components/student/NavBar";
 
 const App = () => {
   return (
-    <div>
+    <div className="font-outfit">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
