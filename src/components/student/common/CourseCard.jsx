@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { assets, dummyCourses } from "../../../assets/assets";
 import { MyContext } from "../../../context/ContextApp";
 import Rating from "./Rating";
 
@@ -7,7 +6,7 @@ const CourseCard = ({ ...props }) => {
   const { currency, calculateDiscount } = useContext(MyContext);
   const discount = calculateDiscount(props.price, props.discount);
   return (
-    <article className="border-borderLight w-[263px] overflow-hidden rounded-lg border">
+    <article className="border-borderLight max-w-full overflow-hidden rounded-lg border">
       <img
         className="max-w-full"
         src={[props.courseThumbnail]}

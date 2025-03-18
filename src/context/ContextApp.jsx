@@ -4,13 +4,10 @@ import { dummyCourses } from "../assets/assets";
 export const MyContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const [coursesData, setCoursesData] = useState([]);
+  const [coursesData, setCoursesData] = useState(dummyCourses);
+  const [coursesForView, setCoursesForView] = useState([]);
 
   const currency = import.meta.env.VITE_CURRENCY;
-
-  const fetchDummyCourses = () => {
-    setCoursesData(dummyCourses);
-  };
 
   const calculateRating = (rating) => {
     if (!rating.length) return 0;
@@ -27,9 +24,17 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetchDummyCourses();
-  }, []);
-  const value = { coursesData, calculateRating, currency, calculateDiscount };
+    if (coursesData.length) {
+      setCoursesForView(coursesData.slice(0, 4));
+    }
+  }, [coursesData]);
+  const value = {
+    coursesData,
+    coursesForView,
+    calculateRating,
+    currency,
+    calculateDiscount,
+  };
   return <MyContext.Provider value={value}>{children}</MyContext.Provider>;
 };
 
