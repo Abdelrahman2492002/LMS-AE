@@ -7,6 +7,8 @@
 
   --color-primaryBlue: #2563eb;
   --color-secondBlue: #0260ffe5;
+  --color-fontBlue: #1c70ff;
+
   --color-dark-gray: #637083;
   --color-gradient: #e6ffff;
 
@@ -20,4 +22,10 @@
 
   --color-mediumGray: #404040;
   --color-ligthGray: #888888;
+  --color-ExtraLigthGray: #6b7280;
+
+  --color-mediumWhite: #f3f3f3;
+
+  --color-mediumPurble: #4b445a;
+  --color-mediumPurble2: #62577b;
 }

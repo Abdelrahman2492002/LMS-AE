@@ -6,20 +6,22 @@ const CourseCard = ({ ...props }) => {
   const { currency, calculateDiscount } = useContext(MyContext);
   const discount = calculateDiscount(props.price, props.discount);
   return (
-    <article className="border-borderLight max-w-full overflow-hidden rounded-lg border">
+    <article className="border-borderLight flex max-w-full flex-col justify-end overflow-hidden rounded-lg border">
       <img
         className="max-w-full"
         src={[props.courseThumbnail]}
         alt="course thumbnail"
       />
-      <div className="flex flex-col gap-1 px-5 pt-2.5 pb-9 text-left">
+      <div className="flex flex-1 flex-col gap-1 px-5 pt-2.5 pb-6 text-left">
         <h3 className="font-semibold">{props.title}</h3>
-        <p className="text-fontGray text-sm">Richard James</p>
-        <Rating rating={props.rating} />
-        <data className="font-semibold" value={discount}>
-          {currency}
-          {discount}
-        </data>
+        <div className="flex flex-1 flex-col justify-end">
+          <p className="text-fontGray text-sm">Richard James</p>
+          <Rating rating={props.rating} />
+          <data className="font-semibold" value={discount}>
+            {currency}
+            {discount}
+          </data>
+        </div>
       </div>
     </article>
   );

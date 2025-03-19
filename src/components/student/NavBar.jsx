@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { assets } from "../../assets/assets";
 import ActionButton from "./common/ActionButton";
 import Button from "./common/Button";
@@ -11,7 +12,13 @@ const NavBar = () => {
 
   return (
     <div className="border-dark-gray bg-gradient flex items-center justify-between border-b px-2 py-4 sm:px-7 md:px-14 lg:px-28 xl:px-40">
-      <img src={assets.logo} alt="logo icon" className="w-20 md:w-[114px]" />
+      <Link to="/">
+        <img
+          src={assets.logo}
+          alt="logo icon"
+          className="w-20 cursor-pointer md:w-[114px]"
+        />
+      </Link>
       <div>
         <div className="text-fontGray md:text-15 flex items-center gap-1.5 text-sm md:gap-3">
           {user ? (
