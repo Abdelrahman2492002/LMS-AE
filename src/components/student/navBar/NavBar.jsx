@@ -1,8 +1,8 @@
 import { Link } from "react-router";
-import { assets } from "../../assets/assets";
-import ActionButton from "./common/ActionButton";
-import Button from "./common/Button";
+import ActionButton from "../common/ActionButton";
+import Button from "../common/Button";
 import { useUser, UserButton, useClerk, SignIn } from "@clerk/clerk-react";
+import { assets } from "../../../assets/assets";
 
 const NavBar = () => {
   const { openSignIn } = useClerk();

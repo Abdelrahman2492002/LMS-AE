@@ -18,9 +18,10 @@ const TestimonialCard = ({ ...props }) => {
         <div className="flex gap-0.5 pb-2.5">
           {[...Array(5)].map((_, index) => (
             <img
-              src={index < 5 ? assets.star : assets.star_blank}
+              src={index < props.rating ? assets.star : assets.star_blank}
               alt="star icon"
               className="w-5"
+              key={index}
             />
           ))}
         </div>

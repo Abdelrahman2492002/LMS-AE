@@ -14,6 +14,7 @@ const Rating = ({ rating }) => {
             src={index < courseRating ? assets.star : assets.star_blank}
             alt="star icon"
             className="w-3.5"
+            key={index}
           />
         ))}
       </div>

@@ -2,12 +2,15 @@
 
 @theme {
   --font-outfit: "Outfit", sans-serif;
+  --font-inter: "Inter", sans-serif;
   --text-15: 15px;
   --text-13: 13px;
 
   --color-primaryBlue: #2563eb;
   --color-secondBlue: #0260ffe5;
   --color-fontBlue: #1c70ff;
+  --color-darkBlue: #1f2937;
+  --color-mediumBlue: #1f2937e5;
 
   --color-dark-gray: #637083;
   --color-gradient: #e6ffff;
@@ -20,11 +23,16 @@
   --color-fontGray: #545454;
   --color-fontBlack: #0e0e0e;
 
+  --color-mediumBlack: #111820;
+
   --color-mediumGray: #404040;
   --color-ligthGray: #888888;
   --color-ExtraLigthGray: #6b7280;
 
+  --color-lightWhite: #ffffffcc;
   --color-mediumWhite: #f3f3f3;
+  --color-white60: #ffffff99;
+  --color-white30: #ffffff4d;
 
   --color-mediumPurble: #4b445a;
   --color-mediumPurble2: #62577b;

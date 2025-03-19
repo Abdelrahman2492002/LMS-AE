@@ -13,13 +13,14 @@ const CoursesView = () => {
       <Heading content="Learn from the best"></Heading>
       <Paragrah content="Discover our top-rated courses across various categories. From coding and design to business and wellness, our courses are crafted to deliver results." />
       <div className="grid grid-cols-1 gap-x-3 gap-y-5 px-8 pt-6 pb-11 sm:grid-cols-2 sm:px-0 md:grid-cols-3 lg:grid-cols-4">
-        {coursesForView.map((courseData) => (
+        {coursesForView.map((courseData, index) => (
           <CourseCard
             courseThumbnail={courseData.courseThumbnail}
             title={courseData.courseTitle}
             rating={courseData.courseRatings}
             price={courseData.coursePrice}
             discount={courseData.discount}
+            key={index}
           />
         ))}
       </div>
