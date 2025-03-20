@@ -11,7 +11,7 @@ const FooterSubscribe = () => {
       <form className="flex items-center gap-2">
         <input
           type="text"
-          className="border-ExtraLigthGray rounded-sm border px-3 py-2.5 outline-0"
+          className="border-ExtraLigthGray rounded-sm border px-3 py-2.5 outline-0 placeholder:text-sm"
           placeholder="Enter your email"
         />
         <Button rounded="rounded-sm" fontWeight="font-medium">

@@ -25,6 +25,7 @@ const CoursesView = () => {
         ))}
       </div>
       <Link
+        onClick={() => scrollTo(0, 0)}
         to="/courses-list"
         className="text-13 md:text-15 hover:bg-gradient hover:text-fontGray text-ligthGray mx-auto cursor-pointer rounded-sm border border-[#6B728080] px-4 py-2 transition-colors"
       >
