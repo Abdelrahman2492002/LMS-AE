@@ -1,12 +1,16 @@
 import { useContext } from "react";
 import { MyContext } from "../../../context/ContextApp";
 import Rating from "./Rating";
+import { Link } from "react-router";
 
 const CourseCard = ({ ...props }) => {
   const { currency, calculateDiscount } = useContext(MyContext);
   const discount = calculateDiscount(props.price, props.discount);
   return (
-    <article className="border-borderLight flex max-w-full flex-col justify-end overflow-hidden rounded-lg border">
+    <Link
+      to="/course-detail"
+      className="border-borderLight flex max-w-full flex-col justify-end overflow-hidden rounded-lg border"
+    >
       <img
         className="max-w-full"
         src={[props.courseThumbnail]}
@@ -23,7 +27,7 @@ const CourseCard = ({ ...props }) => {
           </data>
         </div>
       </div>
-    </article>
+    </Link>
   );
 };
 

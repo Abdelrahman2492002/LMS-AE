@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { MyContext } from "../../../context/ContextApp";
 import { assets } from "../../../assets/assets";
 
-const Rating = ({ rating }) => {
+const Rating = ({ rating, color }) => {
   const { calculateRating } = useContext(MyContext);
   const courseRating = calculateRating(rating);
   return (
@@ -18,7 +18,7 @@ const Rating = ({ rating }) => {
           />
         ))}
       </div>
-      <p className="text-ligthGray">({rating.length})</p>
+      <p className={`${color ? color : "text-ligthGray"}`}>({rating.length})</p>
     </div>
   );
 };

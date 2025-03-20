@@ -3,6 +3,7 @@ import Home from "./pages/student/Home";
 import NavBar from "./components/student/navBar/NavBar";
 import Footer from "./components/student/footer/Footer";
 import CoursesList from "./pages/student/CourseList";
+import CourseDetails from "./pages/student/CourseDetails";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/courses-list" element={<CoursesList />} />
         <Route path="/courses-list/:course" element={<CoursesList />} />
+        <Route path="/course-detail" element={<CourseDetails />} />
       </Routes>
       <Footer />
     </div>
