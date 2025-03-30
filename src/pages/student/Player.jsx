@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import Loading from "../../components/student/common/Loading";
 import ChapterPlayer from "../../components/student/player/ChapterPlayer";
 import PlayerSection from "../../components/student/player/PlayerSection";
+import RatingCourse from "../../components/student/player/RatingCourse";
 
 const Player = () => {
   const { enrollmentCourses } = useContext(MyContext);
@@ -40,6 +41,7 @@ const Player = () => {
               index={index}
             />
           ))}
+          <RatingCourse />
         </div>
         <div className="w-full lg:max-w-[424px]">
           <PlayerSection courseData={courseData} playerData={playerData} />

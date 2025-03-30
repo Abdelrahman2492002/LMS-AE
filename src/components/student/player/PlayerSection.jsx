@@ -7,13 +7,17 @@ const PlayerSection = ({ courseData, playerData }) => {
         <div>
           <YouTube
             videoId={playerData.lectureUrl.split("/").pop()}
-            iframeClassName="w-full aspect-video"
+            iframeClassName="w-full h-full aspect-video"
           />
-          <div>
+          <div className="flex items-center justify-between px-1">
             <p>
               {playerData.chapter}.{playerData.lecture}.
               {playerData.lectureTitle}
             </p>
+
+            <button className="hover:text-primaryBlue text-fontBlue cursor-pointer text-sm font-medium transition-colors">
+              {false ? "Completed" : "Mark Completed"}
+            </button>
           </div>
         </div>
       ) : (

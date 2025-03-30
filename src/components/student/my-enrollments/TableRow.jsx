@@ -45,7 +45,10 @@ const TableRow = ({ id, index, course, image, title, progressArray }) => {
       </td>
       <td className="px-2 py-3 max-sm:text-right">
         <button
-          onClick={() => navigate(`/player/${id}`)}
+          onClick={() => {
+            navigate(`/player/${id}`);
+            scrollTo(0, 0);
+          }}
           className={`${isComplete ? "bg-midGreen" : "bg-primaryBlue"} max-sm:text-13 sm:py- min-w-20 cursor-pointer rounded px-2 py-1 text-center text-white sm:px-5`}
         >
           {isComplete ? "Completed" : "On Going"}
