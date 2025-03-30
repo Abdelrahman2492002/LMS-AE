@@ -8,8 +8,9 @@ const CourseCard = ({ ...props }) => {
   const discount = calculateDiscount(props.price, props.discount);
   return (
     <Link
-      to="/course-detail"
+      to={`/course-detail/${props.id}`}
       className="border-borderLight flex max-w-full flex-col justify-end overflow-hidden rounded-lg border"
+      onClick={() => scrollTo(0, 0)}
     >
       <img
         className="max-w-full"

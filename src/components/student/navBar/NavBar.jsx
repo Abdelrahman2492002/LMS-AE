@@ -23,9 +23,9 @@ const NavBar = () => {
         <div className="text-fontGray md:text-15 flex items-center gap-1.5 text-sm md:gap-3">
           {user ? (
             <>
-              <ActionButton>Become Educator</ActionButton>
+              <ActionButton >Become Educator</ActionButton>
               <span>|</span>
-              <ActionButton>My Enrollments</ActionButton>
+              <ActionButton path ="/my-enrollments">My Enrollments</ActionButton>
               <UserButton />
             </>
           ) : (

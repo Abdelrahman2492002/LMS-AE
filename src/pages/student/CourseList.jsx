@@ -54,6 +54,7 @@ const CoursesList = () => {
       <div className="grid grid-cols-1 gap-x-3 gap-y-5 px-8 pt-14 sm:grid-cols-2 sm:px-0 md:grid-cols-3 lg:grid-cols-4">
         {filteredCourse.map((courseData, index) => (
           <CourseCard
+            id={courseData._id}
             courseThumbnail={courseData.courseThumbnail}
             title={courseData.courseTitle}
             rating={courseData.courseRatings}

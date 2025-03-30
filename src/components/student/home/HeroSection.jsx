@@ -1,3 +1,4 @@
+import Loading from "../common/Loading";
 import SearchBar from "../common/SearchBar";
 import TrustedCompanies from "./TrustedCompanies";
 
