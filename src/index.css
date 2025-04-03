@@ -46,6 +46,9 @@
   --color-mediumPurble2: #62577b;
 
   --color-primaryOrange: #ff4b4b;
+
+  --color-sideHover: #f2f3ff;
+  --color-sideBorder: #2525254d;
 }
 
 .rich-text p {

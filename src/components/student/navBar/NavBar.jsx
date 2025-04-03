@@ -1,8 +1,9 @@
 import { Link } from "react-router";
 import ActionButton from "../common/ActionButton";
 import Button from "../common/Button";
-import { useUser, UserButton, useClerk, SignIn } from "@clerk/clerk-react";
+import { useUser, UserButton, useClerk } from "@clerk/clerk-react";
 import { assets } from "../../../assets/assets";
+import Logo from "../common/Logo";
 
 const NavBar = () => {
   const { openSignIn } = useClerk();
@@ -12,20 +13,14 @@ const NavBar = () => {
 
   return (
     <div className="border-dark-gray bg-gradient flex items-center justify-between border-b px-2 py-4 sm:px-7 md:px-14 lg:px-28 xl:px-40">
-      <Link to="/">
-        <img
-          src={assets.logo}
-          alt="logo icon"
-          className="w-20 cursor-pointer md:w-[114px]"
-        />
-      </Link>
+      <Logo />
       <div>
         <div className="text-fontGray md:text-15 flex items-center gap-1.5 text-sm md:gap-3">
           {user ? (
             <>
-              <ActionButton >Become Educator</ActionButton>
+              <ActionButton path="/educator">Become Educator</ActionButton>
               <span>|</span>
-              <ActionButton path ="/my-enrollments">My Enrollments</ActionButton>
+              <ActionButton path="/my-enrollments">My Enrollments</ActionButton>
               <UserButton />
             </>
           ) : (
