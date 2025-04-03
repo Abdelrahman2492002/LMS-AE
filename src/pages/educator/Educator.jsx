@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import NavBar from "../../components/educator/NavBar";
 import SideBar from "../../components/educator/SideBar";
-import Footer from "../../components/educator/Footer";
+import Footer from "../../components/educator/footer/Footer";
 
 const Educator = () => {
   return (

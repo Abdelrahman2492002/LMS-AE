@@ -1,5 +1,5 @@
-import { assets } from "../../assets/assets";
-import Logo from "../student/common/Logo";
+import { assets } from "../../../assets/assets";
+import Logo from "../../student/common/Logo";
 import FooterIcon from "./FooterIcon";
 
 const Footer = () => {
