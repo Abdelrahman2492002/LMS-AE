@@ -17,9 +17,13 @@ const AddCourse = () => {
     dispatch({ type, value });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="min-h-screen p-5 md:px-9 md:py-6">
-      <form className="flex max-w-md flex-col gap-4">
+      <form onSubmit={handleSubmit} className="flex max-w-md flex-col gap-4">
         <AddCourseInput
           id="course-title"
           title="Course Title"

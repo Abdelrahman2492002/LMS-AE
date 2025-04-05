@@ -10,6 +10,7 @@ const LectureInput = ({ heading, type, value, onchange }) => {
         value={value}
         onChange={onchange}
         id={heading}
+        required
       />
     </div>
   );

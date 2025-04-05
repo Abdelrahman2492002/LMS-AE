@@ -64,6 +64,8 @@ const AddChaptersAndLectures = () => {
     }
   };
 
+  console.log(state.chapters);
+
   const handleLecture = (action, chapterId, lectureIndex) => {
     switch (action) {
       case "add":

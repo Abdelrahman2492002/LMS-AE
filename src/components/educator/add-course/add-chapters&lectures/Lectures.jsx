@@ -5,12 +5,16 @@ const Lectures = ({ chapter, handleLecture }) => {
   return (
     <div className="p-3">
       {chapter.chapterContent.map((lecture, lectureIndex) => (
-        <div key={lectureIndex} className="mb-2 flex justify-between">
-          <div className="flex items-center gap-1.5">
+        <div
+          key={lectureIndex}
+          className="text-fontGray mb-4 flex justify-between"
+        >
+          <div className="flex items-center gap-2">
             <p>
-              {lectureIndex + 1}. {lecture.lectureTitle} -
+              {lectureIndex + 1}. {lecture.lectureTitle}
             </p>
-            <p> {lecture.lectureDuration}</p>
+            <span>-</span>
+            <p> {lecture.lectureDuration} minutes</p>
             <a href={lecture.lectureUrl} className="text-primaryBlue">
               link
             </a>
@@ -22,11 +26,12 @@ const Lectures = ({ chapter, handleLecture }) => {
             }
             src={assets.cross_icon}
             alt="cross icon"
+            className="cursor-pointer"
           />
         </div>
       ))}
       <button
-        onClick={() => handleLecture("add")}
+        onClick={() => handleLecture("add", chapter.chapterId)}
         type="button"
         className="mb-2 cursor-pointer rounded bg-gray-100 p-2 text-sm"
       >

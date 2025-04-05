@@ -16,6 +16,8 @@ const AddLectureSection = ({ state, dispatch }) => {
       isPreviewFree: state.isPreviewFree,
     };
 
+    console.log(state.currentChapterId);
+
     const updateChapter = state.chapters.map((chapter) => {
       if (chapter.chapterId === state.currentChapterId) {
         return {
@@ -23,6 +25,7 @@ const AddLectureSection = ({ state, dispatch }) => {
           chapterContent: [...chapter.chapterContent, newLecture],
         };
       }
+      return chapter;
     });
 
     dispatch({ type: "setChapters", value: updateChapter });
@@ -56,9 +59,10 @@ const AddLectureSection = ({ state, dispatch }) => {
           <input
             type="checkbox"
             className="rounded border px-2 py-1"
-            value={state.isPreviewFree}
-            onchange={(e) => handleChange("setIsPreviewFree", e.target.value)}
+            checked={state.isPreviewFree}
+            onChange={(e) => handleChange("setIsPreviewFree", e.target.checked)}
             id="preview"
+            required
           />
         </div>
 
