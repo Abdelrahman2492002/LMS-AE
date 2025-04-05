@@ -14,7 +14,7 @@ const StudentEnrollmentsTable = ({ data }) => {
         <tbody>
           {data.map((item, index) => (
             <tr
-              key={index}
+              key={`${item.student.name}${index}`}
               className="border-b border-[#25252533] text-xs sm:text-base"
             >
               <td className="hidden p-4 sm:table-cell">{index + 1}</td>

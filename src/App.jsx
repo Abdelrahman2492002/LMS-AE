@@ -11,6 +11,7 @@ import Dashboard from "./pages/educator/Dashboard";
 import AddCourse from "./pages/educator/AddCourse";
 import StudentEnrolled from "./pages/educator/StudentEnrolled";
 import MyCourses from "./pages/educator/MyCourses";
+import "quill/dist/quill.snow.css";
 
 const App = () => {
   const location = useLocation();

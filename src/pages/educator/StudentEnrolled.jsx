@@ -30,7 +30,7 @@ const StudentEnrolled = () => {
         <tbody>
           {enrolledStudents.map((item, index) => (
             <tr
-              key={item.name + index}
+              key={`${item.name}${index}`}
               className="text-left text-xs text-gray-500 max-sm:text-center sm:text-sm"
             >
               <td className="px-1.5 py-3 md:px-4">{index + 1}</td>
@@ -45,7 +45,9 @@ const StudentEnrolled = () => {
               <td className="truncate px-1.5 py-3 md:px-4">
                 {item.courseTitle}
               </td>
-              <td>{new Date(item.purchaseDate).toLocaleDateString()}</td>
+              <td className="px-1.5 py-3 md:px-4">
+                {new Date(item.purchaseDate).toLocaleDateString()}
+              </td>
             </tr>
           ))}
         </tbody>
