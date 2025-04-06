@@ -2,7 +2,7 @@ const TableBody = ({ coursesData, currency }) => {
   return (
     <tbody>
       {coursesData.map((course) => (
-        <tr className="text-xs text-gray-500 max-sm:text-center sm:text-sm">
+        <tr className="border-borderLight text-ligthGray text-xs not-last:border-b max-sm:text-center sm:text-sm">
           <td className="flex items-center gap-3 rounded px-2 py-3.5 md:px-6">
             <img
               className="max-w-16 shadow-[0px_4px_15px_2px_#0000001A]"

@@ -15,7 +15,7 @@ const MyCourses = () => {
   return (
     <div className="p-5 md:p-7">
       <MainHeading>My Courses</MainHeading>
-      <div className="mt-5 max-w-4xl overflow-hidden rounded-md border border-[#25252533] md:mt-8">
+      <div className="border-borderLight mt-5 max-w-4xl overflow-hidden rounded-md border md:mt-8">
         <table className="w-full table-fixed overflow-hidden md:table-auto">
           <TableHeader />
           <TableBody coursesData={coursesData} currency={currency} />

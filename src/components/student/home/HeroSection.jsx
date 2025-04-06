@@ -1,10 +1,15 @@
+import { useTheme } from "../../../context/ThemeContext";
 import Loading from "../common/Loading";
 import SearchBar from "../common/SearchBar";
 import TrustedCompanies from "./TrustedCompanies";
 
 const HeroSection = () => {
+  const { theme } = useTheme();
+
   return (
-    <div className="flex flex-col items-center bg-gradient-to-b from-[#E6FFFF] to-white px-3 pt-24 pb-32 sm:px-7 md:px-14 lg:px-28 xl:px-40">
+    <div
+      className={`bg-backgroundColor flex flex-col items-center ${theme === "light" && "to-backgroundColor bg-gradient-to-b from-[#E6FFFF]"} px-3 pt-24 pb-32 sm:px-7 md:px-14 lg:px-28 xl:px-40`}
+    >
       <h1 className="max-w-3xl text-[28px] leading-9 font-bold md:text-5xl md:leading-16">
         Empower your future with the courses designed to
         <span className="text-primaryBlue"> fit your choice.</span>

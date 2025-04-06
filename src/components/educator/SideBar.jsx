@@ -24,7 +24,7 @@ const SideBar = () => {
           key={item.name}
           end
           className={({ isActive }) =>
-            `my-0.5 flex gap-2.5 px-6 py-3.5 transition-colors md:px-11 ${isActive ? "bg-sideHover border-r-[6px] border-[#5F6FFF]" : "hover:bg-sideHover border-r-[6px] border-r-white"}`
+            `my-0.5 flex gap-2.5 px-6 py-3.5 transition-colors md:px-11 ${isActive ? "bg-sideHover border-r-[6px] border-[#5F6FFF]" : "hover:bg-sideHover border-r-backgroundColor border-r-[6px]"}`
           }
         >
           <img src={item.icon} alt="icon" />

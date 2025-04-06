@@ -12,7 +12,7 @@ const CourseChapter = ({ chapter }) => {
       {/* chapter section */}
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="border-borderLight2 bg-mediumWhite2 flex cursor-pointer justify-between border px-2 py-4 md:px-6"
+        className="border-borderLight2 bg-backgroundColor flex cursor-pointer justify-between border px-2 py-4 md:px-6"
       >
         <div className="flex gap-2 md:gap-4">
           <img

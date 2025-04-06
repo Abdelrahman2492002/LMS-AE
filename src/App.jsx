@@ -12,12 +12,17 @@ import AddCourse from "./pages/educator/AddCourse";
 import StudentEnrolled from "./pages/educator/StudentEnrolled";
 import MyCourses from "./pages/educator/MyCourses";
 import "quill/dist/quill.snow.css";
+import { useTheme } from "./context/ThemeContext";
 
 const App = () => {
   const location = useLocation();
+  const { theme } = useTheme();
 
   return (
-    <div className="font-outfit" data-theme="light">
+    <div
+      className="font-outfit bg-backgroundColor transition-all delay-75"
+      data-theme={theme}
+    >
       {!location.pathname.includes("/educator") && <NavBar />}
       <Routes>
         <Route index element={<Home />} />

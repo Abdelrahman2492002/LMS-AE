@@ -17,10 +17,10 @@ const StudentEnrolled = () => {
     return <Loading />;
   }
   return (
-    <div className="m-5 max-w-4xl overflow-hidden rounded-md border border-[#25252533] md:m-9">
+    <div className="border-borderLight m-5 max-w-4xl overflow-hidden rounded-md border md:m-9">
       <table className="w-full table-fixed overflow-hidden md:table-auto">
         <thead className="text-left text-sm max-sm:text-center md:text-base">
-          <tr className="border-b border-[#25252533]">
+          <tr className="border-borderLight border-b">
             <TheadCell width="w-7">#</TheadCell>
             <TheadCell>Student name</TheadCell>
             <TheadCell>Course Title</TheadCell>
@@ -31,7 +31,7 @@ const StudentEnrolled = () => {
           {enrolledStudents.map((item, index) => (
             <tr
               key={`${item.name}${index}`}
-              className="text-left text-xs text-gray-500 max-sm:text-center sm:text-sm"
+              className="borderLight text-ligthGray text-left text-xs not-last:border-b max-sm:text-center sm:text-sm"
             >
               <td className="px-1.5 py-3 md:px-4">{index + 1}</td>
               <td className="flex items-center gap-2 rounded px-1.5 py-3 md:px-4">

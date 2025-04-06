@@ -41,6 +41,8 @@
   --color-white60: #ffffff99;
   --color-white30: #ffffff4d;
   --color-mediumWhite2: #f7f9fd;
+  --color-backgroundColor: #ffffff;
+  --color-backgroundColor2: #f3f3f3;
 
   --color-mediumPurble: #4b445a;
   --color-mediumPurble2: #62577b;
@@ -49,6 +51,50 @@
 
   --color-sideHover: #f2f3ff;
   --color-sideBorder: #2525254d;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: false;
+  prefersdark: false;
+  color-scheme: dark;
+
+  --color-darkBlue: #1c70ff; /* أفتح من #0d1117 */
+  --color-mediumBlue: #d1d5db; /* أفتح من #1f2937 */
+
+  --color-dark-gray: #6b7280; /* أفتح من #9ca3af */
+  --color-gradient: #2c2f36; /* خلفية بتدرج داكن أفتح */
+
+  --color-midGreen: #10b981;
+
+  --color-border: #4b5563;
+  --color-borderLight: #6b7280;
+  --color-borderLight2: #9ca3af;
+
+  --color-fontGray: #d1d5db;
+  --color-fontBlack: #e5e7eb;
+  --color-fontMediumBlack: #e5e7eb;
+
+  --color-mediumBlack: #fb7185; /* أفتح من #111827 */
+
+  --color-mediumGray: #6b7280; /* أفتح من #9ca3af */
+  --color-ligthGray: #e5e7eb; /* أفتح من #d1d5db */
+  --color-ExtraLigthGray: #f3f4f6; /* أفتح من #e5e7eb */
+
+  --color-lightWhite: #f9fafbcc;
+  --color-mediumWhite: #e5e7eb;
+  --color-white60: #f9fafb99;
+  --color-white30: #f9fafb4d;
+
+  --color-mediumPurble: #a78bfa;
+  --color-mediumPurble2: #c4b5fd;
+
+  --color-primaryOrange: #fb7185;
+
+  --color-sideHover: #2b3743;
+  --color-sideBorder: #ffffff33;
+  --color-backgroundColor: #1a1a1a;
+  --color-backgroundColor2: #262323;
 }
 
 .rich-text p {
@@ -72,7 +118,7 @@
 .rich-text h3 {
   font-size: 18px;
   font-weight: 600;
-  color: #333333;
+  color: #d1d5db;
   margin: 20px 0;
 }
 

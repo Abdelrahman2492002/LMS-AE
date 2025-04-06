@@ -10,11 +10,13 @@ import CoursePricing from "../../components/student/course-details/CoursePricing
 import CourseMetaInfo from "../../components/student/course-details/CourseMetaInfo";
 import CourseBenefits from "../../components/student/course-details/CourseBenefits";
 import Button from "../../components/student/common/Button";
+import { useTheme } from "../../context/ThemeContext";
 
 const CourseDetails = () => {
   const { coursesData } = useContext(MyContext);
   const [courseDetails, setCourseDetails] = useState(null);
   const { id } = useParams();
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (coursesData.length > 0) {
@@ -28,7 +30,9 @@ const CourseDetails = () => {
   }
 
   return (
-    <div className="bg-gradient-to-b from-[#E6FFFF] to-white px-3 pt-8 pb-96 sm:px-7 md:px-10 md:pt-20 lg:px-20 xl:px-40">
+    <div
+      className={`${theme === "light" && "to-backgroundColor bg-gradient-to-b from-[#E6FFFF]"} px-3 pt-8 pb-96 sm:px-7 md:px-10 md:pt-20 lg:px-20 xl:px-40`}
+    >
       <div className="flex flex-col-reverse items-start gap-y-12 sm:gap-x-5 md:flex-row lg:gap-x-16">
         <div className="max-w-[653px]">
           <CourseInfo details={courseDetails} />

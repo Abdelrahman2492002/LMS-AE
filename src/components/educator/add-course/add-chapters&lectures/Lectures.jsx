@@ -9,7 +9,7 @@ const Lectures = ({ chapter, handleLecture }) => {
           key={lectureIndex}
           className="text-fontGray mb-4 flex justify-between"
         >
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-1 md:gap-2">
             <p>
               {lectureIndex + 1}. {lecture.lectureTitle}
             </p>
@@ -33,7 +33,7 @@ const Lectures = ({ chapter, handleLecture }) => {
       <button
         onClick={() => handleLecture("add", chapter.chapterId)}
         type="button"
-        className="mb-2 cursor-pointer rounded bg-gray-100 p-2 text-sm"
+        className="text-fontGray bg-backgroundColor2 mb-2 cursor-pointer rounded p-2 text-sm"
       >
         + Add Lecture
       </button>

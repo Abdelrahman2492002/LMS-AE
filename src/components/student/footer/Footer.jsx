@@ -4,7 +4,7 @@ import FooterSubscribe from "./FooterSubscribe";
 
 const Footer = () => {
   return (
-    <footer className="font-inter bg-mediumBlack text-lightWhite">
+    <footer className="font-inter text-lightWhite bg-[#111827]">
       <div className="border-white30 mx-8 flex flex-col pt-16 pb-7 text-center font-light sm:mx-12 sm:flex-row sm:gap-24 sm:text-left md:gap-52 md:border-b md:py-11 lg:gap-32 xl:mx-36">
         <FooterBrand />
         <FooterLinks />

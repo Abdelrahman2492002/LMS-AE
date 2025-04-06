@@ -42,6 +42,8 @@ import profile_img from "./profile_img.png";
 import profile_img2 from "./profile_img2.png";
 import profile_img3 from "./profile_img3.png";
 import lesson_icon from "./lesson_icon.svg";
+import lightMode_icon from "./lightMode_icon.png";
+import nightMode_icon from "./nightMode_icon.png";
 
 export const assets = {
   logo,
@@ -88,6 +90,8 @@ export const assets = {
   play_icon,
   blue_tick_icon,
   lesson_icon,
+  lightMode_icon,
+  nightMode_icon,
 };
 
 export const dummyEducatorData = {
