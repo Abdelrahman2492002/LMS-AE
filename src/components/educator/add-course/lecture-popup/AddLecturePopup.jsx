@@ -11,7 +11,7 @@ const AddLecturePopup = ({ children, closePopUp }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <h2 className="text-lg font-semibold">Add Lecture</h2>
-        <div className="flex flex-col gap-2 p-2">
+
           {children}
           <img
             onClick={closePopUp}
@@ -19,7 +19,7 @@ const AddLecturePopup = ({ children, closePopUp }) => {
             alt="cross icon"
             className="absolute top-4 right-4 w-4 cursor-pointer"
           />
-        </div>
+
       </div>
     </div>
   );

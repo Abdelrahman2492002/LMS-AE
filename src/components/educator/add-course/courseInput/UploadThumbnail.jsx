@@ -21,7 +21,7 @@ const UploadThumbnail = ({ image, handleChange }) => {
           onChange={handleChange}
         />
         <img
-          src={image ? URL.createObjectURL(image) : ""}
+          src={image ? URL.createObjectURL(image) : null}
           alt=""
           className="max-h-10"
         />

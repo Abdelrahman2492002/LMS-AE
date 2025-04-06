@@ -2,7 +2,6 @@ import React from "react";
 import { assets } from "../../../../assets/assets";
 
 const Chapters = ({ index, chapter, handleChapter }) => {
-  console.log(chapter.collapsed);
   return (
     <div className="border-sideBorder flex items-center justify-between border-b px-4 py-3 text-sm">
       <div className="flex items-center gap-2.5">
