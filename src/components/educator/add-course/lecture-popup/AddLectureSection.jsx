@@ -1,17 +1,20 @@
-import { useRef } from "react";
 import AddLecturePopup from "./AddLecturePopup";
 import LectureInput from "./LectureInput";
 import uniqid from "uniqid";
-
+import { checkValidity } from "../utility";
 const AddLectureSection = ({ state, dispatch }) => {
   const handleChange = (type, value) => {
     dispatch({ type, value });
   };
 
-  const formRef = useRef(null);
-
   const handleAddLecture = () => {
-    if (formRef.current.checkValidity()) {
+    if (
+      checkValidity(
+        state.lectureTitle,
+        state.lectureDuration,
+        state.lectureDuration,
+      )
+    ) {
       const newLecture = {
         lectureId: uniqid(),
         lectureTitle: state.lectureTitle,
@@ -33,16 +36,13 @@ const AddLectureSection = ({ state, dispatch }) => {
       dispatch({ type: "setChapters", value: updateChapter });
       dispatch({ type: "closePopUp" });
       dispatch({ type: "resetLectureData" });
-    } else {
-      formRef.current.reportValidity();
-      return;
     }
   };
 
   return (
     <div>
       <AddLecturePopup closePopUp={() => dispatch({ type: "closePopUp" })}>
-        <form ref={formRef} className="flex flex-col gap-2 p-2">
+        <div className="flex flex-col gap-2 p-2">
           <LectureInput
             heading="Lecture Title"
             value={state.lectureTitle}
@@ -81,7 +81,7 @@ const AddLectureSection = ({ state, dispatch }) => {
           >
             Add
           </button>
-        </form>
+        </div>
       </AddLecturePopup>
     </div>
   );

@@ -20,7 +20,6 @@ const AddCourse = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-
   return (
     <div className="min-h-screen p-5 md:px-9 md:py-6">
       <form onSubmit={handleSubmit} className="flex max-w-md flex-col gap-4">
