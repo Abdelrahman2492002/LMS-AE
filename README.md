@@ -1,12 +1,55 @@
-# React + Vite
+# نظام إدارة التعلم (LMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+مرحبًا بك في مشروع نظام إدارة التعلم (LMS)! هذا المشروع هو الواجهة الأمامية للتطبيق، حيث يتم تقديم صفحة للطالب ولوحة تحكم (Dashboard) للمعلم. تم بناء المشروع باستخدام React مع Tailwind CSS مع بعض المكتبات الإضافية مثل Clerk لإدارة تسجيل الدخول و react-youtube لتضمين مقاطع الفيديو.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## المحتويات
 
-## Expanding the ESLint configuration
+- [نظرة عامة](#نظرة-عامة)
+- [المميزات](#المميزات)
+- [التقنيات المستخدمة](#التقنيات-المستخدمة)
+- [متطلبات التشغيل](#متطلبات-التشغيل)
+- [كيفية التثبيت والتشغيل](#كيفية-التثبيت-والتشغيل)
+- [بنية المشروع](#بنية-المشروع)
+- [التطوير المستقبلي](#التطوير-المستقبلي)
+- [الرخصة](#الرخصة)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## نظرة عامة
+
+يهدف مشروع نظام إدارة التعلم إلى توفير تجربة تعليمية متكاملة لكل من الطلاب والمعلمين. يقدم المشروع واجهتين رئيسيتين:
+
+- **صفحة الطالب:** لعرض محتوى الدروس، مقاطع الفيديو، والمواد التعليمية بطريقة تفاعلية.
+- **لوحة المعلم (Dashboard):** لإدارة المحتوى التعليمي والتفاعل مع الطلاب.
+
+---
+
+## المميزات
+
+- **واجهة مستخدم عصرية:** تصميم متجاوب باستخدام Tailwind CSS.
+- **نظام مصادقة آمن:** باستخدام مكتبة Clerk لإدارة تسجيل الدخول.
+- **دمج مقاطع الفيديو:** من خلال مكتبة react-youtube.
+- **تجربة مستخدم سلسة:** يتم التركيز على الأداء وتقديم تجربة سريعة ومريحة.
+- **واجهة تحكم متكاملة للمعلم:** تسهل إدارة الدروس والمواد التعليمية.
+
+---
+
+## التقنيات المستخدمة
+
+- **React:** لإنشاء المكونات التفاعلية.
+- **Tailwind CSS:** لتصميم واجهة المستخدم بشكل سريع ومرن.
+- **Clerk:** لإدارة المصادقة وتسجيل الدخول.
+- **react-youtube:** لتضمين وتشغيل مقاطع الفيديو.
+- **مكتبات مساعدة أخرى:** حسب الحاجة.
+
+---
+
+## متطلبات التشغيل
+
+- [Node.js](https://nodejs.org/) الإصدار 14 أو أحدث
+- [npm](https://www.npmjs.com/) أو [Yarn](https://yarnpkg.com/)
+- اتصال بالإنترنت (لاستخدام المكتبات الخارجية مثل Clerk وYouTube)
+
+
