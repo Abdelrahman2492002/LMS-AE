@@ -2,15 +2,15 @@ import { useParams } from "react-router";
 import { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../context/ContextApp";
 import Loading from "../../components/student/common/Loading";
-import CourseInfo from "../../components/student/course-details/left-side/CourseInfo";
-import CourseStructure from "../../components/student/course-details/left-side/CourseStructure";
 import CourseDescription from "../../components/student/course-details/left-side/CourseDescription";
-import CourseDetailsCard from "../../components/student/course-details/CourseDetailsCard";
-import CoursePricing from "../../components/student/course-details/CoursePricing";
-import CourseMetaInfo from "../../components/student/course-details/CourseMetaInfo";
-import CourseBenefits from "../../components/student/course-details/CourseBenefits";
 import Button from "../../components/student/common/Button";
 import { useTheme } from "../../context/ThemeContext";
+import CourseDetailsCard from "../../components/student/course-details/right-side/CourseDetailsCard";
+import CoursePricing from "../../components/student/course-details/right-side/CoursePricing";
+import CourseInfo from "../../components/student/course-details/left-side/CourseInfo";
+import CourseMetaInfo from "../../components/student/course-details/right-side/CourseMetaInfo";
+import CourseBenefits from "../../components/student/course-details/right-side/CourseBenefits";
+import CourseStructure from "../../components/student/course-details/left-side/CourseStructure";
 
 const CourseDetails = () => {
   const { coursesData } = useContext(MyContext);
