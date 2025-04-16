@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useCallback, useReducer } from "react";
 import {
   chapterContentReducer,
   initialChaptersData,
@@ -14,75 +14,81 @@ const AddChaptersAndLectures = () => {
     initialChaptersData,
   );
 
-  const handleChapter = (action, chapterId) => {
-    switch (action) {
-      case "add":
-        {
-          const title = prompt("Enter Chapter name: ");
-          if (title) {
-            const newChapter = {
-              chapterId: uniqid(),
-              chapterTitle: title,
-              chapterContent: [],
-              collapsed: false,
-              chapterOrder:
-                state.chapters.length > 0
-                  ? state.chapters.slice(-1)[0].chapterOrder + 1
-                  : 1,
-            };
-            dispatch({
-              type: "setChapters",
-              value: [...state.chapters, newChapter],
-            });
+  const handleChapter = useCallback(
+    (action, chapterId) => {
+      switch (action) {
+        case "add":
+          {
+            const title = prompt("Enter Chapter name: ");
+            if (title) {
+              const newChapter = {
+                chapterId: uniqid(),
+                chapterTitle: title,
+                chapterContent: [],
+                collapsed: false,
+                chapterOrder:
+                  state.chapters.length > 0
+                    ? state.chapters.slice(-1)[0].chapterOrder + 1
+                    : 1,
+              };
+              dispatch({
+                type: "setChapters",
+                value: [...state.chapters, newChapter],
+              });
+            }
           }
+          break;
+        case "remove": {
+          const removeChapter = state.chapters.filter(
+            (chapter) => chapter.chapterId !== chapterId,
+          );
+          dispatch({
+            type: "setChapters",
+            value: removeChapter,
+          });
+          break;
         }
-        break;
-      case "remove": {
-        const removeChapter = state.chapters.filter(
-          (chapter) => chapter.chapterId !== chapterId,
-        );
-        dispatch({
-          type: "setChapters",
-          value: removeChapter,
-        });
-        break;
+        case "toggle": {
+          const toggleCollapsed = state.chapters.map((chapter) => {
+            return chapter.chapterId === chapterId
+              ? { ...chapter, collapsed: !chapter.collapsed }
+              : chapter;
+          });
+          dispatch({
+            type: "setChapters",
+            value: toggleCollapsed,
+          });
+          break;
+        }
+        default:
+          break;
       }
-      case "toggle": {
-        const toggleCollapsed = state.chapters.map((chapter) => {
-          return chapter.chapterId === chapterId
-            ? { ...chapter, collapsed: !chapter.collapsed }
-            : chapter;
-        });
-        dispatch({
-          type: "setChapters",
-          value: toggleCollapsed,
-        });
-        break;
-      }
-      default:
-        break;
-    }
-  };
+    },
+    [state.chapters],
+  );
 
-  const handleLecture = (action, chapterId, lectureIndex) => {
-    switch (action) {
-      case "add":
-        {
-          dispatch({ type: "setChapterId", value: chapterId });
-          dispatch({ type: "showPopUp" });
-        }
-        break;
-      case "remove": {
-        const updateChapters = state.chapters.map((chapter) => {
-          if (chapter.chapterId === chapterId) {
-            chapter.chapterContent.splice(lectureIndex, 1);
+  const handleLecture = useCallback(
+    (action, chapterId, lectureIndex) => {
+      switch (action) {
+        case "add":
+          {
+            dispatch({ type: "setChapterId", value: chapterId });
+            dispatch({ type: "showPopUp" });
           }
-          return chapter;
-        });
-        dispatch({ type: "setChapters", value: updateChapters });
+          break;
+        case "remove": {
+          const updateChapters = state.chapters.map((chapter) => {
+            if (chapter.chapterId === chapterId) {
+              chapter.chapterContent.splice(lectureIndex, 1);
+            }
+            return chapter;
+          });
+          dispatch({ type: "setChapters", value: updateChapters });
+        }
       }
-    }
-  };
+    },
+    [state.chapters],
+  );
 
   return (
     <div>

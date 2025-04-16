@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { MyContext } from "../../../context/ContextApp";
-import { assets } from "../../../assets/assets";
+import { MyContext } from "../../../../context/ContextApp";
+import { assets } from "../../../../assets/assets";
 
 const CourseMetaInfo = ({ details }) => {
   const { calculateRating, calculateCourseDurations, calculateLecturesCount } =

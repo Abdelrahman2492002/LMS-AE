@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import { assets } from "../../../../assets/assets";
 
-const Chapters = ({ index, chapter, handleChapter }) => {
+const Chapters = memo(({ index, chapter, handleChapter }) => {
   return (
     <div className="border-sideBorder flex items-center justify-between border-b px-4 py-3 text-sm">
       <div className="flex items-center gap-2.5">
@@ -26,6 +26,6 @@ const Chapters = ({ index, chapter, handleChapter }) => {
       />
     </div>
   );
-};
+});
 
 export default Chapters;

@@ -14,7 +14,6 @@ const MyEnrollments = () => {
           <TableBody />
         </table>
       </div>
-      <Footer />
     </>
   );
 };
